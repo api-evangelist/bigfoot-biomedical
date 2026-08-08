@@ -1,0 +1,55 @@
+generated: '2026-08-07'
+method: probed
+source: https://clinichub.bigfootbiomedical.com/.well-known/openid-configuration
+note: >-
+  Bigfoot Biomedical publishes no API and no developer authentication documentation. The
+  only machine-readable authentication surface reachable on a Bigfoot-owned host is the
+  OpenID Connect discovery document for the Bigfoot Clinic Hub healthcare-professional
+  portal, which runs on Salesforce Experience Cloud. The endpoints and scopes below are
+  therefore Salesforce platform identity endpoints scoped to Bigfoot's org, not the
+  authentication contract of a Bigfoot product API. No Bigfoot API key, bearer token, or
+  mTLS scheme is documented anywhere on the provider's public surface.
+summary:
+  types:
+  - openIdConnect
+  - oauth2
+  api_key_in: []
+  oauth2_flows:
+  - authorizationCode
+  - implicit
+  surface: HCP portal identity provider only — no product API behind it
+schemes:
+- name: bigfoot-clinic-hub-oidc
+  type: openIdConnect
+  openIdConnectUrl: https://clinichub.bigfootbiomedical.com/.well-known/openid-configuration
+  issuer: https://clinichub.bigfootbiomedical.com
+  platform: Salesforce Experience Cloud
+  endpoints:
+    authorization: https://clinichub.bigfootbiomedical.com/services/oauth2/authorize
+    token: https://clinichub.bigfootbiomedical.com/services/oauth2/token
+    userinfo: https://clinichub.bigfootbiomedical.com/services/oauth2/userinfo
+    revocation: https://clinichub.bigfootbiomedical.com/services/oauth2/revoke
+    introspection: https://clinichub.bigfootbiomedical.com/services/oauth2/introspect
+    registration: https://clinichub.bigfootbiomedical.com/services/oauth2/register
+    end_session: https://clinichub.bigfootbiomedical.com/services/auth/idp/oidc/logout
+    jwks: https://clinichub.bigfootbiomedical.com/id/keys
+  response_types_supported:
+  - code
+  - token
+  - token id_token
+  id_token_signing_alg_values_supported:
+  - RS256
+  token_endpoint_auth_methods_supported:
+  - client_secret_post
+  - client_secret_basic
+  - private_key_jwt
+  scopes: scopes/bigfoot-biomedical-scopes.yml
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+x-evidence:
+- url: https://clinichub.bigfootbiomedical.com/.well-known/openid-configuration
+  http_status: 200
+  fetched: '2026-08-07'
+- url: https://www.bigfootbiomedical.com/.well-known/openid-configuration
+  http_status: 404
+  fetched: '2026-08-07'

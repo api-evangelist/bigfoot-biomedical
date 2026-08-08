@@ -1,0 +1,276 @@
+generated: '2026-08-07'
+method: probed
+source: https://clinichub.bigfootbiomedical.com/.well-known/openid-configuration
+note: Bigfoot Biomedical publishes no OAuth scope reference and no API. These scopes are the scopes_supported
+  list advertised by the Salesforce Experience Cloud identity provider behind the Bigfoot Clinic Hub healthcare-professional
+  portal, captured verbatim from that org's OIDC discovery document. They are Salesforce PLATFORM scopes,
+  not scopes of a Bigfoot product API, and no Bigfoot documentation describes them. Recorded for completeness
+  with their provenance stated; do not read this as a Bigfoot authorization model.
+docs: null
+schemes:
+- name: bigfoot-clinic-hub-oidc
+  source: well-known/bigfoot-biomedical-openid-configuration.json
+  platform: Salesforce Experience Cloud
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://clinichub.bigfootbiomedical.com/services/oauth2/authorize
+    tokenUrl: https://clinichub.bigfootbiomedical.com/services/oauth2/token
+  - flow: implicit
+    authorizationUrl: https://clinichub.bigfootbiomedical.com/services/oauth2/authorize
+scopes:
+- scope: address
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: cdp_api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: cdp_calculated_insight_api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: cdp_identityresolution_api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: cdp_ingest_api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: cdp_profile_api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: cdp_query_api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: cdp_segment_api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: chatbot_api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: chatter_api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: content
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: custom_permissions
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: data_cloud_user_claims
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: eclair_api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: einstein_gpt_api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: email
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: forgot_password
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: full
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: id
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: interaction_api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: lightning
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: mcp_api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: offline_access
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: openid
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: pardot_api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: phone
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: profile
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: pwdless_login_api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: refresh_token
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: scrt_api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: sfap_api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: user_registration_api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: visualforce
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: wave_api
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+- scope: web
+  description: null
+  flows:
+  - authorizationCode
+  - implicit
+  sources:
+  - well-known/bigfoot-biomedical-openid-configuration.json
+x-evidence:
+- url: https://clinichub.bigfootbiomedical.com/.well-known/openid-configuration
+  http_status: 200
+  fetched: '2026-08-07'

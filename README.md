@@ -42,5 +42,25 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Bigfoot Biomedical is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
+Bigfoot Biomedical was a Milpitas, California medical-device company building connected
+insulin-management technology for people with insulin-requiring diabetes. Its flagship product,
+the FDA-cleared Bigfoot Unity Diabetes Management System (510(k) K202145), paired reusable smart
+insulin pen caps with Abbott FreeStyle Libre 2 iCGM data and a clinician-set dosing program,
+displaying real-time glucose values, trends and recommended correction doses on the pen cap
+itself, alongside a patient mobile app and the Salesforce-hosted Bigfoot Clinic Hub portal for
+healthcare professionals.
+
+Abbott announced its acquisition of Bigfoot on 5 September 2023 and closed it the same month. The
+company is now fully absorbed into Abbott: `www.bigfootbiomedical.com` resolves through Abbott's
+platform, the homepage is headed *"Bigfoot is Now Abbott"*, and the site is a frozen archive.
+
+**No public API.** Bigfoot never operated a developer program. No OpenAPI, AsyncAPI, GraphQL SDL,
+SDK, CLI, webhook catalog, MCP server or A2A agent card is published on any Bigfoot-owned host,
+and the 161-URL sitemap contains no developer or API documentation page. The only machine-readable
+document found anywhere on the estate is the Salesforce Experience Cloud OIDC discovery file
+behind the login-gated Clinic Hub healthcare-professional portal — platform boilerplate, not a
+Bigfoot API. See `x-coverage` in `apis.yml`.
+
+- https://www.bigfootbiomedical.com/
+- https://github.com/BigfootBiomedical (4 repositories, all archived, all third-party forks)
 - https://forgeglobal.com/bigfoot-biomedical_stock/

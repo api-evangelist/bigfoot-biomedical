@@ -1,0 +1,65 @@
+generated: '2026-08-07'
+method: derived
+source: >-
+  https://www.bigfootbiomedical.com/security.html,
+  https://www.bigfootbiomedical.com/help/security_whitepaper.html,
+  https://clinichub.bigfootbiomedical.com/.well-known/openid-configuration
+note: >-
+  Bigfoot Biomedical publishes no API, so there is no API contract to assert standards
+  against. What follows is the honest, evidence-backed set: two identity standards observed
+  live on the Clinic Hub portal host, one regulatory regime the company states a commitment
+  to in prose, one device clearance it names, and explicit negatives for everything else so
+  the absence is recorded rather than assumed.
+standards:
+- id: oidc
+  name: OpenID Connect Discovery 1.0
+  conforms: true
+  evidence: >-
+    /.well-known/openid-configuration served (HTTP 200) at
+    https://clinichub.bigfootbiomedical.com with issuer, authorization_endpoint,
+    token_endpoint, userinfo_endpoint, jwks_uri and RS256 id_token signing. Provided by the
+    Salesforce Experience Cloud platform hosting the Bigfoot Clinic Hub, not by a Bigfoot
+    API.
+- id: oauth2
+  name: OAuth 2.0
+  conforms: true
+  evidence: >-
+    authorization_endpoint / token_endpoint / revocation_endpoint / introspection_endpoint
+    advertised in the Clinic Hub OIDC discovery document; 36 scopes_supported. Salesforce
+    platform surface.
+- id: hipaa
+  name: Health Insurance Portability and Accountability Act
+  conforms: claimed
+  evidence: >-
+    "Bigfoot values the confidentiality, integrity and availability of all protected health
+    and personally identifiable information (e.g., PHI, PII) in accordance with all
+    applicable federal and state privacy and security laws, including the Health Insurance
+    Portability and Accountability Act." — /security.html. A stated commitment in prose; no
+    audit report, attestation, or third-party assessment is published.
+- id: fda-510k
+  name: FDA 510(k) clearance
+  conforms: true
+  evidence: >-
+    Bigfoot Unity Diabetes Management System cited as 510(k) K202145 on the homepage
+    footnotes. Device clearance, not an API/interoperability conformance.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 403 on www and 401 on clinichub.
+- id: openapi
+  conforms: false
+  evidence: No OpenAPI or Swagger document at any probed path on any Bigfoot host.
+- id: asyncapi
+  conforms: false
+  evidence: No event, streaming or webhook surface is documented.
+- id: fhir
+  conforms: false
+  evidence: >-
+    No FHIR endpoint, capability statement, or resource shape is published, despite the
+    digital-health domain.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No API, therefore no error envelope to assess.
+- id: a2a
+  conforms: false
+  evidence: /.well-known/agent-card.json and /.well-known/agent.json miss on every host.
+certifications: []

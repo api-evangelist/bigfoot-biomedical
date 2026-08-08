@@ -1,0 +1,58 @@
+generated: '2026-08-07'
+method: probed
+source: live GET of /.well-known/* on every Bigfoot Biomedical host
+note: >-
+  Only one /.well-known/ document is served anywhere on a Bigfoot Biomedical host: the
+  OpenID Connect discovery document for the Bigfoot Clinic Hub, the healthcare-professional
+  portal running on Salesforce Experience Cloud. It is platform-provided by Salesforce, not
+  a Bigfoot developer-program artifact — the scopes it advertises are Salesforce platform
+  scopes, not scopes of a Bigfoot API. The marketing host (www) 404s every well-known path.
+  Recorded here because it is a real, verified 200 at a provider-owned host; read the
+  provenance, not just the presence.
+hosts:
+- host: https://www.bigfootbiomedical.com
+  role: corporate/marketing site (Abbott AEM platform)
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://clinichub.bigfootbiomedical.com
+  role: Bigfoot Clinic Hub HCP portal (Salesforce Experience Cloud)
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: bigfoot-biomedical-openid-configuration.json
+    content_type: application/json;charset=UTF-8
+    issuer: https://clinichub.bigfootbiomedical.com
+    provider: Salesforce Experience Cloud (platform-provided)
+  - path: /.well-known/security.txt
+    status: 401
+  - path: /.well-known/agent-card.json
+    status: 401
+  - path: /.well-known/agent.json
+    status: 401
+control:
+  note: >-
+    Soft-200 check. A random nonexistent path under /.well-known/ on the Clinic Hub host
+    returns 401, not 200, so the openid-configuration 200 is a genuine distinct hit and not
+    a single-page-app catch-all.
+  path: /.well-known/zzz-not-real-<random>.json
+  status: 401
+x-evidence:
+  fetched: '2026-08-07'
+  url: https://clinichub.bigfootbiomedical.com/.well-known/openid-configuration
+  http_status: 200
+  content_type: application/json;charset=UTF-8

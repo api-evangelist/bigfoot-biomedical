@@ -1,8 +1,18 @@
 aid: bigfoot-biomedical
 name: Bigfoot Biomedical
-description: 'Bigfoot Biomedical is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Bigfoot Biomedical was a Milpitas, California medical-device company building
+  connected insulin-management technology for people with insulin-requiring diabetes. Its
+  flagship product, the FDA-cleared Bigfoot Unity Diabetes Management System, paired reusable
+  smart insulin pen caps with Abbott FreeStyle Libre 2 iCGM data and a clinician-set dosing
+  program, displaying real-time glucose values, trends and recommended correction doses on
+  the pen cap itself, alongside a patient mobile app and a Salesforce-hosted Bigfoot Clinic
+  Hub portal for healthcare professionals. Abbott announced its acquisition of Bigfoot in
+  September 2023 and closed it the same month; the company is now fully absorbed into Abbott
+  and its website is an Abbott-hosted archive headed "Bigfoot is Now Abbott." Bigfoot never
+  operated a public developer program, and no OpenAPI, AsyncAPI, GraphQL SDL, SDK, webhook
+  catalog or developer portal has ever been published on its own surface.'
 url: https://raw.githubusercontent.com/api-evangelist/bigfoot-biomedical/refs/heads/main/apis.yml
+image: https://www.bigfootbiomedical.com/content/dam/corp/bigfoot-biomedical/press-releases/bigfoot-logo.png
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +22,14 @@ created: '2026-08-07'
 modified: '2026-08-07'
 tags:
 - Company
+- Health
+- Digital Health
+- Medical Devices
+- Diabetes
+- Insulin Management
+- Continuous Glucose Monitoring
+- Connected Devices
+- Acquired
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +37,60 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/bigfoot-biomedical-domain-security.yml
 - type: Website
+  url: https://www.bigfootbiomedical.com/
+- type: Blog
+  url: https://www.bigfootbiomedical.com/blog.html
+- type: Support
+  url: https://www.bigfootbiomedical.com/contact.html
+- type: PrivacyPolicy
+  url: https://www.bigfootbiomedical.com/help/privacy-policy.html
+- type: TermsOfService
+  url: https://www.bigfootbiomedical.com/help/terms_of_use.html
+- type: Security
+  url: https://www.bigfootbiomedical.com/security.html
+- type: GitHubOrganization
+  url: https://github.com/BigfootBiomedical
+- type: SecondaryMarket
   url: https://forgeglobal.com/bigfoot-biomedical_stock/
+- type: VulnerabilityDisclosure
+  url: security/bigfoot-biomedical-vulnerability-disclosure.yml
+- type: WellKnown
+  url: well-known/bigfoot-biomedical-well-known.yml
+- type: Authentication
+  url: authentication/bigfoot-biomedical-authentication.yml
+- type: OAuthScopes
+  url: scopes/bigfoot-biomedical-scopes.yml
+- type: Conformance
+  url: conformance/bigfoot-biomedical-conformance.yml
+- type: LLMsTxt
+  url: llms/bigfoot-biomedical-llms.txt
+x-enrichment:
+  date: '2026-08-07'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    Bigfoot Biomedical was acquired by Abbott in September 2023 and no longer exists as an
+    independent company; bigfootbiomedical.com now CNAMEs to Abbott's platform
+    (www-bigfootbiomedical-com.abbottapps.net), is headed "Bigfoot is Now Abbott", carries a
+    2024 copyright, and its 161-URL sitemap contains no developer, API or documentation page
+    of any kind — the only live machine-readable document on any Bigfoot host is Salesforce
+    Experience Cloud's own OIDC discovery file behind the login-gated Clinic Hub HCP portal.
+  evidence:
+  - url: https://www.bigfootbiomedical.com/sitemap.xml
+    status: 200
+  - url: https://www.bigfootbiomedical.com/openapi.json
+    status: 404
+  - url: https://www.bigfootbiomedical.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.bigfootbiomedical.com/developers
+    status: 301
+  - url: https://clinichub.bigfootbiomedical.com/openapi.json
+    status: 401
+  checked: '2026-08-07'

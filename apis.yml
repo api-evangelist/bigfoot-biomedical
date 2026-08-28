@@ -12,6 +12,17 @@ description: 'Bigfoot Biomedical was a Milpitas, California medical-device compa
   operated a public developer program, and no OpenAPI, AsyncAPI, GraphQL SDL, SDK, webhook
   catalog or developer portal has ever been published on its own surface.'
 url: https://raw.githubusercontent.com/api-evangelist/bigfoot-biomedical/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.bigfootbiomedical.com/content/dam/corp/bigfoot-biomedical/press-releases/bigfoot-logo.png
 x-type: company
 x-source: harvest:secondary-market
